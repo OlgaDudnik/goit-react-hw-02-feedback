@@ -3,6 +3,7 @@ import Statistics from 'components/Statistics';
 import Notification from 'components/Notification';
 import Section from 'components/Section';
 import FeedbackOptions from 'components/FeedbackOptions';
+import 'animate.css';
 
 class App extends Component {
   state = {
@@ -11,9 +12,13 @@ class App extends Component {
     bad: 0,
   };
 
-  handleIncrement = name => {
+  handleIncrement = el => {
+    el.target.classList.remove('animate__bounceIn');
+    setTimeout(function () {
+      el.target.classList.add('animate__bounceIn');
+    }, 50);
     this.setState(prev => {
-      return { [name]: prev[name] + 1 };
+      return { [el.target.name]: prev[el.target.name] + 1 };
     });
   };
 

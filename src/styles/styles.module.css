@@ -19,6 +19,7 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 10px;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 button:hover {

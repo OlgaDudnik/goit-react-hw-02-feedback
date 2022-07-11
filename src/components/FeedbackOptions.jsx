@@ -9,9 +9,9 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => (
         <button
           key={e}
           type="button"
-          className={styles.button}
+          className={(styles.button, 'animate__bounceIn')}
           name={e}
-          onClick={el => onLeaveFeedback(el.target.name)}
+          onClick={el => onLeaveFeedback(el)}
         >
           {e}
         </button>
